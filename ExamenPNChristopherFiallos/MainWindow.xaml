@@ -7,6 +7,66 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Name="btnAgregarUsuario" Content="Agregar Usuario" Grid.Row="0" Click="BtnAgregarUsuario_Click"></Button>
+            <Button Name="btnModificarUsuario" Content="Modificar Usuario" Grid.Row="1" Click="BtnModificarUsuario_Click"></Button>
+            <Button Name="btnEliminarUsuario" Content="Eliminar Usuario" Grid.Row="2" Click="BtnEliminarUsuario_Click"></Button>
+            <Button Name="btnVerUsuarios" Content="Ver Usuarios" Grid.Row="3" Click="BtnVerUsuarios_Click"></Button>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Label Content="Nombre" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Label Content="Apellido" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Usuario" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Correo Electronico" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Tipo de Usuario" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBox Name="txtNombre" Grid.Column="1" />
+            <TextBox Name="txtApellido" Grid.Column="1" Grid.Row="1"/>
+            <TextBox Name="txtUsuario" Grid.Column="1" Grid.Row="2"/>
+            <TextBox Name="txtEmail" Grid.Column="1" Grid.Row="3"/>
+            <TextBox Name="txtTipoUsuario" Grid.Column="1" Grid.Row="4"/>
+
+            <ListView Name="lvMostrarUsuarios" Grid.Column="0" Grid.Row="5"/>
+
+            <Grid Grid.Column="1" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Usuario a Modificar" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Name="txtUsuarioModificable" Grid.Column="1"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
